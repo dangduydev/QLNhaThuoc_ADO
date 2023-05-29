@@ -19,6 +19,14 @@ namespace Phacmarcity_ADO.NET.DB_layer
             conn = new SqlConnection(ConnStr);
             comm = conn.CreateCommand();
         }
+
+
+        private string connectionString;
+        public string ConnectionString
+        {
+            get { return connectionString; }
+            set { connectionString = value; }
+        }
         public DataSet ExecuteQueryDataSet(string strSQL, CommandType ct)
         {
             if (conn.State == ConnectionState.Open)
@@ -31,6 +39,14 @@ namespace Phacmarcity_ADO.NET.DB_layer
             da.Fill(ds);
             return ds;
         }
+        public void SetConnectionString(string connectionString)
+        {
+            ConnStr = connectionString;
+            conn = new SqlConnection(ConnStr);
+            comm = conn.CreateCommand();
+        }
+
+        public SqlConnection GetConnection() { return conn; }
 
         public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
         {

@@ -31,7 +31,7 @@ namespace Phacmarcity_ADO.NET
         private void InitializeComponent()
         {
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.MaHangSX = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -62,14 +62,16 @@ namespace Phacmarcity_ADO.NET
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.MaThuoc = new System.Windows.Forms.TextBox();
+            this.TenThuoc = new System.Windows.Forms.TextBox();
+            this.CongDung = new System.Windows.Forms.TextBox();
+            this.MaLoai = new System.Windows.Forms.TextBox();
+            this.GhiChu = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.picHangSX = new System.Windows.Forms.PictureBox();
             this.picNCC = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.MaNhaCungCap = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuoc)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -88,21 +90,21 @@ namespace Phacmarcity_ADO.NET
             this.textBox2.Size = new System.Drawing.Size(169, 27);
             this.textBox2.TabIndex = 193;
             // 
-            // textBox7
+            // MaHangSX
             // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox7.Location = new System.Drawing.Point(3, 71);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(169, 27);
-            this.textBox7.TabIndex = 193;
+            this.MaHangSX.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.MaHangSX.Location = new System.Drawing.Point(3, 71);
+            this.MaHangSX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaHangSX.Name = "MaHangSX";
+            this.MaHangSX.Size = new System.Drawing.Size(169, 27);
+            this.MaHangSX.TabIndex = 193;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(31, 404);
+            this.btnSearch.Location = new System.Drawing.Point(35, 452);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(113, 41);
@@ -345,7 +347,7 @@ namespace Phacmarcity_ADO.NET
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(30, 358);
+            this.label4.Location = new System.Drawing.Point(30, 391);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 28);
             this.label4.TabIndex = 198;
@@ -366,7 +368,7 @@ namespace Phacmarcity_ADO.NET
             this.label16.BackColor = System.Drawing.SystemColors.Control;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label16.Location = new System.Drawing.Point(796, 142);
+            this.label16.Location = new System.Drawing.Point(799, 123);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(129, 50);
             this.label16.TabIndex = 190;
@@ -426,7 +428,7 @@ namespace Phacmarcity_ADO.NET
             // 
             this.pnlSearch.Controls.Add(this.cbxTimKiem);
             this.pnlSearch.Controls.Add(this.txtTimKiem);
-            this.pnlSearch.Location = new System.Drawing.Point(230, 390);
+            this.pnlSearch.Location = new System.Drawing.Point(230, 450);
             this.pnlSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(180, 70);
@@ -434,62 +436,64 @@ namespace Phacmarcity_ADO.NET
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox8);
-            this.panel3.Controls.Add(this.textBox9);
+            this.panel3.Controls.Add(this.MaNhaCungCap);
+            this.panel3.Controls.Add(this.MaThuoc);
+            this.panel3.Controls.Add(this.TenThuoc);
+            this.panel3.Controls.Add(this.CongDung);
+            this.panel3.Controls.Add(this.MaHangSX);
+            this.panel3.Controls.Add(this.MaLoai);
+            this.panel3.Controls.Add(this.GhiChu);
             this.panel3.Location = new System.Drawing.Point(230, 189);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(184, 201);
+            this.panel3.Size = new System.Drawing.Size(184, 240);
             this.panel3.TabIndex = 204;
             // 
-            // textBox4
+            // MaThuoc
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(3, 2);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 27);
-            this.textBox4.TabIndex = 156;
+            this.MaThuoc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.MaThuoc.Location = new System.Drawing.Point(3, 2);
+            this.MaThuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaThuoc.Name = "MaThuoc";
+            this.MaThuoc.Size = new System.Drawing.Size(169, 27);
+            this.MaThuoc.TabIndex = 156;
             // 
-            // textBox5
+            // TenThuoc
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(3, 37);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 27);
-            this.textBox5.TabIndex = 168;
+            this.TenThuoc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.TenThuoc.Location = new System.Drawing.Point(3, 37);
+            this.TenThuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TenThuoc.Name = "TenThuoc";
+            this.TenThuoc.Size = new System.Drawing.Size(169, 27);
+            this.TenThuoc.TabIndex = 168;
             // 
-            // textBox6
+            // CongDung
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(4, 138);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(169, 27);
-            this.textBox6.TabIndex = 172;
+            this.CongDung.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.CongDung.Location = new System.Drawing.Point(4, 138);
+            this.CongDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CongDung.Name = "CongDung";
+            this.CongDung.Size = new System.Drawing.Size(169, 27);
+            this.CongDung.TabIndex = 172;
             // 
-            // textBox8
+            // MaLoai
             // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox8.Location = new System.Drawing.Point(3, 105);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(169, 27);
-            this.textBox8.TabIndex = 194;
+            this.MaLoai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.MaLoai.Location = new System.Drawing.Point(4, 172);
+            this.MaLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaLoai.Name = "MaLoai";
+            this.MaLoai.Size = new System.Drawing.Size(169, 27);
+            this.MaLoai.TabIndex = 194;
             // 
-            // textBox9
+            // GhiChu
             // 
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox9.Location = new System.Drawing.Point(2, 175);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(169, 27);
-            this.textBox9.TabIndex = 197;
+            this.GhiChu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.GhiChu.Location = new System.Drawing.Point(2, 206);
+            this.GhiChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Size = new System.Drawing.Size(169, 27);
+            this.GhiChu.TabIndex = 197;
+            this.GhiChu.TextChanged += new System.EventHandler(this.GhiChu_TextChanged);
             // 
             // btnCancel
             // 
@@ -531,11 +535,32 @@ namespace Phacmarcity_ADO.NET
             this.picNCC.TabStop = false;
             this.picNCC.Click += new System.EventHandler(this.picNCC_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label5.Location = new System.Drawing.Point(30, 360);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 28);
+            this.label5.TabIndex = 207;
+            this.label5.Text = "Mã Loại";
+            // 
+            // MaNhaCungCap
+            // 
+            this.MaNhaCungCap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.MaNhaCungCap.Location = new System.Drawing.Point(2, 105);
+            this.MaNhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaNhaCungCap.Name = "MaNhaCungCap";
+            this.MaNhaCungCap.Size = new System.Drawing.Size(169, 27);
+            this.MaNhaCungCap.TabIndex = 198;
+            // 
             // Frm_Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 658);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.panel3);
@@ -621,13 +646,15 @@ namespace Phacmarcity_ADO.NET
         private Panel pnlMain;
         private Panel pnlSearch;
         private Panel panel3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private TextBox MaThuoc;
+        private TextBox TenThuoc;
+        private TextBox CongDung;
+        private TextBox MaLoai;
+        private TextBox GhiChu;
         private Button btnCancel;
         private TextBox textBox2;
-        private TextBox textBox7;
+        private TextBox MaHangSX;
+        private Label label5;
+        private TextBox MaNhaCungCap;
     }
 }

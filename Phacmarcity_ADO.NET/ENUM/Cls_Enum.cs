@@ -8,6 +8,24 @@ namespace Phacmarcity_ADO.NET.ENUM
 {
     public static class Cls_Enum
     {
+        public enum OptionThuoc
+        {
+            MaThuoc,
+            TenThuoc,
+            MaHangSX,
+            MaNhaCungCap,
+            CongDung,
+            MaLoai,
+            GhiChu
+
+        }
+        public enum OptionHangSX
+        {
+            MaHangSX,
+            TenHang,
+            QuocGia
+        }
+
         public enum OptionPhieuNhap
         {
             NgaySX,

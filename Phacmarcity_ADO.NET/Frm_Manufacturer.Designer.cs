@@ -42,7 +42,7 @@ namespace Phacmarcity_ADO.NET
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaHSX = new System.Windows.Forms.TextBox();
+            this.txtMaHangSX = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -209,14 +209,14 @@ namespace Phacmarcity_ADO.NET
             this.label2.TabIndex = 55;
             this.label2.Text = "Mã hãng sản xuất";
             // 
-            // txtMaHSX
+            // txtMaHangSX
             // 
-            this.txtMaHSX.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.txtMaHSX.Location = new System.Drawing.Point(3, 12);
-            this.txtMaHSX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaHSX.Name = "txtMaHSX";
-            this.txtMaHSX.Size = new System.Drawing.Size(169, 27);
-            this.txtMaHSX.TabIndex = 54;
+            this.txtMaHangSX.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtMaHangSX.Location = new System.Drawing.Point(3, 12);
+            this.txtMaHangSX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaHangSX.Name = "txtMaHangSX";
+            this.txtMaHangSX.Size = new System.Drawing.Size(169, 27);
+            this.txtMaHangSX.TabIndex = 54;
             // 
             // label11
             // 
@@ -224,7 +224,7 @@ namespace Phacmarcity_ADO.NET
             this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label11.Location = new System.Drawing.Point(745, 146);
+            this.label11.Location = new System.Drawing.Point(746, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(269, 50);
             this.label11.TabIndex = 76;
@@ -303,6 +303,7 @@ namespace Phacmarcity_ADO.NET
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(169, 27);
             this.txtTimKiem.TabIndex = 163;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label19
             // 
@@ -318,7 +319,7 @@ namespace Phacmarcity_ADO.NET
             // 
             this.pnlMain.Controls.Add(this.txtQuocGia);
             this.pnlMain.Controls.Add(this.txtTenHang);
-            this.pnlMain.Controls.Add(this.txtMaHSX);
+            this.pnlMain.Controls.Add(this.txtMaHangSX);
             this.pnlMain.Location = new System.Drawing.Point(232, 204);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMain.Name = "pnlMain";
@@ -444,7 +445,7 @@ namespace Phacmarcity_ADO.NET
         private Button btnUpdate;
         private Button btnAdd;
         private Label label2;
-        private TextBox txtMaHSX;
+        private TextBox txtMaHangSX;
         private Label label11;
         private Label label14;
         private Label label3;

@@ -9,6 +9,37 @@ namespace Phacmarcity_ADO.NET.Class
 {
     public static class StringConvert
     {
+        public static string ConvertToEnumHangSX(string input)
+        {
+            switch (input)
+            {
+                case "Mã Hãng Sane Xuất":
+                    return "MaHangSX";
+                case "Tên Hãng":
+                    return "TenHang";
+                case "Quốc Gia":
+                    return "QuocGia";
+                default:
+                    return "";
+            }
+        }
+        public static string ConvertToEnumMedicine(string input)
+        {
+
+            switch (input)
+            {
+                case "Mã thuốc":
+                    return "MaThuoc";
+                case "Tên thuốc":
+                    return "TenThuoc";
+                case "Mã hãng Sản Xuất":
+                    return "MaHangSX";
+                case "Mã nhà cung cấp":
+                    return "MaNhaCungCap";
+                default:
+                    return "";
+            }
+        }
         public static string ConvertToEnumPhieuNhap(string input)
         {
             switch (input)
@@ -120,7 +151,21 @@ namespace Phacmarcity_ADO.NET.Class
                     return "";
             }
         }
+        public static string ConvertToEnumManufacturer(string input)
+        {
 
+            switch (input)
+            {
+                case "Mã hãng sản xuất":
+                    return "MaHangSX";
+                case "Tên hãng":
+                    return "TenHang";
+                case "Quốc gia":
+                    return "QuocGia";
+                default:
+                    return "";
+            }
+        }
 
     }
 }

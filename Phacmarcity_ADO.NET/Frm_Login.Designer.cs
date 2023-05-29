@@ -35,7 +35,7 @@ namespace Phacmarcity_ADO.NET
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -104,14 +104,14 @@ namespace Phacmarcity_ADO.NET
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // txtUser
+            // txtUsername
             // 
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtUser.Location = new System.Drawing.Point(360, 170);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(312, 34);
-            this.txtUser.TabIndex = 3;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsername.Location = new System.Drawing.Point(360, 170);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(312, 34);
+            this.txtUsername.TabIndex = 3;
             // 
             // txtPass
             // 
@@ -172,7 +172,7 @@ namespace Phacmarcity_ADO.NET
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -194,7 +194,7 @@ namespace Phacmarcity_ADO.NET
         private Panel panel1;
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox txtUser;
+        private TextBox txtUsername;
         private TextBox txtPass;
         private Label label2;
         private Label label3;

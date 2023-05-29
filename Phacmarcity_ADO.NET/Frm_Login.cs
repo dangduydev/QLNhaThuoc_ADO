@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Phacmarcity_ADO.NET.BS_layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,31 @@ namespace Phacmarcity_ADO.NET
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            Form form = new Frm_Home();
-            form.ShowDialog();
+            bool isLoggedIn = false;
+
+            while (!isLoggedIn)
+            {
+                BLLogin blLogin = new BLLogin();
+                bool check_Login = blLogin.KiemTraDangNhap(txtUsername.Text, txtPass.Text);
+                if (check_Login)
+                {
+                    isLoggedIn = true;
+                    Form f = new Frm_Home();
+                    f.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi tên đăng nhập hoặc mật khẩu");
+                    txtUsername.Focus();
+                    break;
+                    /*                    // Yêu cầu người dùng nhập lại thông tin đăng nhập
+                                        DialogResult result = MessageBox.Show("Bạn có muốn đăng nhập lại không?", "Đăng nhập lại", MessageBoxButtons.YesNo);
+                                        if (result == DialogResult.No)
+                                        {
+                                            break;
+                                        }*/
+                }
+            }
         }
 
         private void Frm_Login_Load(object sender, EventArgs e)

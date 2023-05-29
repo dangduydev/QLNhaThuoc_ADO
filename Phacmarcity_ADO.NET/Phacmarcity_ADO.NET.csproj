@@ -46,10 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BS layer\BLHangSX.cs" />
     <Compile Include="BS layer\BLKhachHang.cs" />
+    <Compile Include="BS layer\BLLogin.cs" />
     <Compile Include="BS layer\BLNhanVien.cs" />
     <Compile Include="BS layer\BLPhieuNhap.cs" />
     <Compile Include="BS layer\BLProduce_Product.cs" />
+    <Compile Include="BS layer\BLThuoc.cs" />
     <Compile Include="BS layer\BL_Supplier.cs" />
     <Compile Include="Class\StringConvert.cs" />
     <Compile Include="DB_layer\DBMain.cs" />
