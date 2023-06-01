@@ -498,6 +498,7 @@ namespace Phacmarcity_ADO.NET
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(169, 27);
             this.txtMaNCC.TabIndex = 52;
+            this.txtMaNCC.TextChanged += new System.EventHandler(this.txtMaNCC_TextChanged);
             // 
             // pnlSearch
             // 

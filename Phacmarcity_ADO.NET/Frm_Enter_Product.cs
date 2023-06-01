@@ -348,5 +348,10 @@ namespace Phacmarcity_ADO.NET
         {
 
         }
+
+        private void txtMaNCC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

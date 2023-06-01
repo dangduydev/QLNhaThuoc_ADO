@@ -247,6 +247,7 @@ namespace Phacmarcity_ADO.NET
                 BLProduce_Product blTp = new BLProduce_Product();
                 blTp.CapNhatPhieuXuat(this.txtMaPX.Text, this.txtMaNhanVien.Text, this.txtMaKhachHang.Text, this.txtMaThuoc.Text, this.txtSoLuong.Text, this.txtGia.Text, this.dateTimePicker1.Value, ref err);// Load lại dữ liệu trên DataGridView
                 LoadData();
+                reset();
                 // Thông báo
                 MessageBox.Show("Đã sửa xong!");
             }
