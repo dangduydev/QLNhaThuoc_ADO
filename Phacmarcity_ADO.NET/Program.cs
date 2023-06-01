@@ -16,7 +16,7 @@ namespace Phacmarcity_ADO.NET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new Frm_Manufacturer());
+            Application.Run(new Frm_ReportDoanhThu());
         }
     }
 }

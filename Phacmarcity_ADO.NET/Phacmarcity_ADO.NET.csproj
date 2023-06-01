@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BS layer\BLDrugSales.cs" />
     <Compile Include="BS layer\BLHangSX.cs" />
     <Compile Include="BS layer\BLKhachHang.cs" />
     <Compile Include="BS layer\BLLogin.cs" />
@@ -123,17 +124,48 @@
     <Compile Include="Frm_Produce_Product.Designer.cs">
       <DependentUpon>Frm_Produce_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ReportDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReportDoanhThu.Designer.cs">
+      <DependentUpon>Frm_ReportDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ReportPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReportPhieuNhap.Designer.cs">
+      <DependentUpon>Frm_ReportPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ReportPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReportPhieuXuat.Designer.cs">
+      <DependentUpon>Frm_ReportPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Supplier.Designer.cs">
       <DependentUpon>Frm_Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\dsDoanhThuReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDoanhThuReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\dsPhieuNhapReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPhieuNhapReport.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Model\dsPhieuXuatReport.cs">
+      <DependentUpon>dsPhieuXuatReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\dsPhieuXuatReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPhieuXuatReport.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,6 +194,15 @@
     <EmbeddedResource Include="Frm_Produce_Product.resx">
       <DependentUpon>Frm_Produce_Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReportDoanhThu.resx">
+      <DependentUpon>Frm_ReportDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReportPhieuNhap.resx">
+      <DependentUpon>Frm_ReportPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReportPhieuXuat.resx">
+      <DependentUpon>Frm_ReportPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Supplier.resx">
       <DependentUpon>Frm_Supplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +216,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportDoanhThu.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPhieuNhap.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPhieuXuat.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Model\dsDoanhThuReport.xsc">
+      <DependentUpon>dsDoanhThuReport.xsd</DependentUpon>
+    </None>
+    <None Include="Model\dsDoanhThuReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDoanhThuReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Model\dsDoanhThuReport.xss">
+      <DependentUpon>dsDoanhThuReport.xsd</DependentUpon>
+    </None>
     <None Include="Model\dsPhieuNhapReport.xsc">
       <DependentUpon>dsPhieuNhapReport.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -188,6 +249,17 @@
     <None Include="Model\dsPhieuNhapReport.xss">
       <DependentUpon>dsPhieuNhapReport.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Model\dsPhieuXuatReport.xsc">
+      <DependentUpon>dsPhieuXuatReport.xsd</DependentUpon>
+    </None>
+    <None Include="Model\dsPhieuXuatReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPhieuXuatReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Model\dsPhieuXuatReport.xss">
+      <DependentUpon>dsPhieuXuatReport.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

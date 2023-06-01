@@ -217,6 +217,7 @@ namespace Phacmarcity_ADO.NET
                 BL_Supplier blTp = new BL_Supplier();
                 blTp.CapNhatNCC(this.txtMaNCC.Text, this.txtTenNCC.Text, this.txtDiaChiNCC.Text, this.txtThongTinDD.Text, ref err);// Load lại dữ liệu trên DataGridView
                 LoadData();
+                reset();
                 // Thông báo
                 MessageBox.Show("Đã sửa xong!");
             }
