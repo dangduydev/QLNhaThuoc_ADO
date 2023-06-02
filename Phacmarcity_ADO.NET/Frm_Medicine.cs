@@ -40,6 +40,7 @@ namespace Phacmarcity_ADO.NET
         {
             try
             {
+                dbTP.CapNhatSLThuoc(ref err);
                 reset();
                 dgvThuoc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dtThuoc = new DataTable();
@@ -127,6 +128,7 @@ namespace Phacmarcity_ADO.NET
             pnlMain.Enabled = true;
             // Không cho thao tác trên các nút Thêm / Xóa / Thoát 
             this.btnAdd.Enabled = false;
+            this.txtSoLuong.Enabled = false;
             this.btnEdit.Enabled = false;
             this.btnDelete.Enabled = false;
             // Đưa con trỏ đến TextField txtKhachHang 
@@ -177,8 +179,7 @@ namespace Phacmarcity_ADO.NET
             {
                 // Thực hiện lệnh 
                 BLThuoc blTp = new BLThuoc();
-                blTp.CapNhatThuoc(this.MaThuoc.Text, this.TenThuoc.Text, this.MaHangSX.Text, this.MaNhaCungCap.Text, this.CongDung.Text, this.MaLoai.Text, this.GhiChu.Text, ref err);
-
+                blTp.CapNhatThuoc(this.MaThuoc.Text, this.TenThuoc.Text, this.MaHangSX.Text, this.MaNhaCungCap.Text, this.CongDung.Text, this.GhiChu.Text, int.Parse(this.txtSoLuong.Text), ref err);
                 // Load lại dữ liệu trên DataGridView 
                 LoadData();
                 reset();
@@ -236,6 +237,7 @@ namespace Phacmarcity_ADO.NET
             // Cho thao tác trên các nút Lưu / Hủy / Panel 
             this.btnSave.Enabled = true;
             this.btnCancel.Enabled = true;
+            this.txtSoLuong.Enabled = false;
             pnlMain.Enabled = true;
             // Không cho thao tác trên các nút Thêm / Xóa / Thoát 
             this.btnAdd.Enabled = false;
@@ -326,6 +328,11 @@ namespace Phacmarcity_ADO.NET
         }
 
         private void GhiChu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvThuoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

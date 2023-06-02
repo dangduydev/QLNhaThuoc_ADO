@@ -38,12 +38,33 @@ namespace Phacmarcity_ADO.NET.BS_layer
             string sqlString = "Delete From Thuoc Where MaThuoc='" + MaThuoc + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatThuoc(string MaThuoc, string TenThuoc, string MaHangSX, string MaNhaCungCap, string CongDung, string MaLoai, string GhiChu, ref string err)
+        public bool CapNhatSLThuoc(ref string err)
         {
-            string sqlString = "Update Thuoc Set TenThuoc=N'" +
-            TenThuoc + "', MaHangSX= N'" + MaHangSX + "', MaNhaCungCap= N'" + MaNhaCungCap + "', CongDung= N'" + CongDung + "', MaLoai= N'" + MaLoai + "', GhiChu= N'" + GhiChu + "' Where MaThuoc='" + MaThuoc + "'";
+            string sqlString = @"UPDATE Thuoc
+                         SET SoLuong = ISNULL(tongNhap.SoLuong, 0) - ISNULL(tongXuat.SoLuong, 0)
+                         FROM Thuoc
+                         LEFT JOIN (
+                             SELECT MaThuoc, SUM(SoLuong) AS SoLuong
+                             FROM CTPhieuNhap
+                             GROUP BY MaThuoc
+                         ) AS tongNhap ON Thuoc.MaThuoc = tongNhap.MaThuoc
+                         LEFT JOIN (
+                             SELECT MaThuoc, SUM(SoLuong) AS SoLuong
+                             FROM CTPhieuXuat
+                             GROUP BY MaThuoc
+                         ) AS tongXuat ON Thuoc.MaThuoc = tongXuat.MaThuoc";
+
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
+        public bool CapNhatThuoc(string MaThuoc, string TenThuoc, string MaHangSX, string MaNhaCungCap, string CongDung, string GhiChu, int SoLuong, ref string err)
+        {
+            string sqlString = "Update Thuoc Set TenThuoc=N'" +
+            TenThuoc + "', MaHangSX= N'" + MaHangSX + "', MaNhaCungCap= N'" + MaNhaCungCap + "', CongDung= N'" + CongDung + "', GhiChu= N'" + GhiChu  + "', SoLuong= '" + SoLuong + "' Where MaThuoc='" + MaThuoc + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+
+
     }
 }
 

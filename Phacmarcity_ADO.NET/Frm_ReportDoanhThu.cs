@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Phacmarcity_ADO.NET.BS_layer;
 
 namespace Phacmarcity_ADO.NET
 {
@@ -17,6 +19,7 @@ namespace Phacmarcity_ADO.NET
         {
             InitializeComponent();
         }
+
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
         {
@@ -85,7 +88,39 @@ namespace Phacmarcity_ADO.NET
 
         private void reportViewer1_Load_1(object sender, EventArgs e)
         {
-                    
+            /*            // Khởi tạo DataTable
+                        DataTable dataTable = new DataTable();
+                        string connectionString = "Data Source=(local);Initial Catalog=QLNhaThuoc;Integrated Security=True";
+
+                        // Kết nối và lấy dữ liệu từ bảng
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+
+                            string query = "SELECT * FROM YourTableName";
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                            {
+                                adapter.Fill(dataTable);
+                            }
+                        }
+
+                        // Tạo một instance của report
+                        SalesReport report = new SalesReport();
+
+
+                        // Đưa dữ liệu từ DataTable vào báo cáo
+                        report.DataSource = dataTable;
+
+                        // Hiển thị báo cáo
+                        ReportViewer reportViewer = new ReportViewer();
+                        reportViewer.LocalReport.ReportEmbeddedResource = "Phacmarcity_ADO.NET.ReportDoanhThu.rdlc";
+                        reportViewer.LocalReport.DataSources.Clear();
+                        reportViewer.LocalReport.DataSources.Add(new ReportDataSource("dsDoanhThu.xsd", dataTable));
+                        reportViewer.RefreshReport();
+
+                        reportViewer.Show();
+
+                    }*/
         }
     }
 }

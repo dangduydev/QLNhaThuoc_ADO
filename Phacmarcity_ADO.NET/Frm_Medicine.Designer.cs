@@ -62,6 +62,7 @@ namespace Phacmarcity_ADO.NET
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.MaNhaCungCap = new System.Windows.Forms.TextBox();
             this.MaThuoc = new System.Windows.Forms.TextBox();
             this.TenThuoc = new System.Windows.Forms.TextBox();
             this.CongDung = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@ namespace Phacmarcity_ADO.NET
             this.picHangSX = new System.Windows.Forms.PictureBox();
             this.picNCC = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaNhaCungCap = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuoc)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -251,6 +251,7 @@ namespace Phacmarcity_ADO.NET
             this.dgvThuoc.Size = new System.Drawing.Size(826, 405);
             this.dgvThuoc.TabIndex = 166;
             this.dgvThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuoc_CellClick);
+            this.dgvThuoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuoc_CellContentClick);
             // 
             // btnUpdate
             // 
@@ -449,6 +450,15 @@ namespace Phacmarcity_ADO.NET
             this.panel3.Size = new System.Drawing.Size(184, 240);
             this.panel3.TabIndex = 204;
             // 
+            // MaNhaCungCap
+            // 
+            this.MaNhaCungCap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.MaNhaCungCap.Location = new System.Drawing.Point(2, 105);
+            this.MaNhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaNhaCungCap.Name = "MaNhaCungCap";
+            this.MaNhaCungCap.Size = new System.Drawing.Size(169, 27);
+            this.MaNhaCungCap.TabIndex = 198;
+            // 
             // MaThuoc
             // 
             this.MaThuoc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
@@ -545,15 +555,6 @@ namespace Phacmarcity_ADO.NET
             this.label5.Size = new System.Drawing.Size(87, 28);
             this.label5.TabIndex = 207;
             this.label5.Text = "Mã Loại";
-            // 
-            // MaNhaCungCap
-            // 
-            this.MaNhaCungCap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.MaNhaCungCap.Location = new System.Drawing.Point(2, 105);
-            this.MaNhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaNhaCungCap.Name = "MaNhaCungCap";
-            this.MaNhaCungCap.Size = new System.Drawing.Size(169, 27);
-            this.MaNhaCungCap.TabIndex = 198;
             // 
             // Frm_Medicine
             // 

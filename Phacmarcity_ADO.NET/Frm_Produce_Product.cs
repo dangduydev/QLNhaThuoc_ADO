@@ -44,6 +44,7 @@ namespace Phacmarcity_ADO.NET
                 dtPhieuXuat = new DataTable();
                 dtPhieuXuat.Clear();
                 DataSet ds = dbTP.LayPhieuXuat();
+
                 dtPhieuXuat = ds.Tables[0];
                 // Đưa dữ liệu lên DataGridView
                 dgvPhieuXuat.DataSource = dtPhieuXuat;

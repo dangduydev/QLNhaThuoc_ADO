@@ -82,6 +82,12 @@
     <Compile Include="Frm_Client.Designer.cs">
       <DependentUpon>Frm_Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_DrugSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DrugSales.Designer.cs">
+      <DependentUpon>Frm_DrugSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Employees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="Frm_Supplier.Designer.cs">
       <DependentUpon>Frm_Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\dsDoanhThuReport.cs">
+      <DependentUpon>dsDoanhThuReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\dsDoanhThuReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +181,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Frm_Client.resx">
       <DependentUpon>Frm_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DrugSales.resx">
+      <DependentUpon>Frm_DrugSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Employees.resx">
       <DependentUpon>Frm_Employees.cs</DependentUpon>

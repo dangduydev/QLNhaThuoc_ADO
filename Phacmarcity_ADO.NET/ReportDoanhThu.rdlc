@@ -1023,10 +1023,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>dsDoanhThuReport</rd:DataSetName>
         <rd:SchemaPath>D:\HK2_Nam_2\Winform\Cuoi_Ki\Chinh\Phacmarcity_ADO.NET\Phacmarcity_ADO.NET\Model\dsDoanhThuReport.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableName>DataTable2</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTable2TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
