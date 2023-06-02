@@ -21,6 +21,7 @@ namespace Phacmarcity_ADO.NET.DB_layer
         }
 
 
+
         private string connectionString;
         public string ConnectionString
         {
@@ -48,6 +49,7 @@ namespace Phacmarcity_ADO.NET.DB_layer
 
         public SqlConnection GetConnection() { return conn; }
 
+
         public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
         {
             bool f = false;
@@ -70,6 +72,28 @@ namespace Phacmarcity_ADO.NET.DB_layer
                 conn.Close();
             }
             return f;
+        }
+        public object MyExecuteScalar(string strSQL, CommandType ct, ref string error)
+        {
+            object result = null;
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            comm.CommandText = strSQL;
+            comm.CommandType = ct;
+            try
+            {
+                result = comm.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
         }
 
     }

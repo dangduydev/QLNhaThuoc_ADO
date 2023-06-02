@@ -353,5 +353,10 @@ namespace Phacmarcity_ADO.NET
         {
 
         }
+
+        private void dgvPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

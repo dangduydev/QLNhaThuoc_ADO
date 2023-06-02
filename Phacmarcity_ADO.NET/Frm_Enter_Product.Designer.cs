@@ -116,6 +116,7 @@ namespace Phacmarcity_ADO.NET
             this.dgvPhieuNhap.Size = new System.Drawing.Size(814, 415);
             this.dgvPhieuNhap.TabIndex = 40;
             this.dgvPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhap_CellClick);
+            this.dgvPhieuNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhap_CellContentClick);
             // 
             // btnUpdate
             // 
