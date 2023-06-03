@@ -66,5 +66,16 @@ namespace Phacmarcity_ADO.NET
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picDoanhThuThuoc_Click(object sender, EventArgs e)
+        {
+            Form f= new Frm_DrugSales();
+            f.ShowDialog();
+        }
     }
 }

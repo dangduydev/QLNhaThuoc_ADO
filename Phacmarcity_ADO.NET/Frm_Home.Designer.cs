@@ -50,7 +50,7 @@ namespace Phacmarcity_ADO.NET
             this.picKhachHang = new System.Windows.Forms.PictureBox();
             this.picNhanVien = new System.Windows.Forms.PictureBox();
             this.picThuoc = new System.Windows.Forms.PictureBox();
-            this.picXemPhanHoi = new System.Windows.Forms.PictureBox();
+            this.picDoanhThuThuoc = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@ namespace Phacmarcity_ADO.NET
             ((System.ComponentModel.ISupportInitialize)(this.picKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picThuoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picXemPhanHoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDoanhThuThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -134,23 +134,24 @@ namespace Phacmarcity_ADO.NET
             this.panel3.Controls.Add(this.picKhachHang);
             this.panel3.Controls.Add(this.picNhanVien);
             this.panel3.Controls.Add(this.picThuoc);
-            this.panel3.Controls.Add(this.picXemPhanHoi);
+            this.panel3.Controls.Add(this.picDoanhThuThuoc);
             this.panel3.Location = new System.Drawing.Point(0, 176);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(511, 375);
             this.panel3.TabIndex = 170;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.LemonChiffon;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(272, 337);
+            this.label10.Location = new System.Drawing.Point(262, 337);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 20);
+            this.label10.Size = new System.Drawing.Size(131, 20);
             this.label10.TabIndex = 193;
-            this.label10.Text = "Xem phản hồi";
+            this.label10.Text = "Doanh thu thuốc ";
             // 
             // label11
             // 
@@ -318,17 +319,18 @@ namespace Phacmarcity_ADO.NET
             this.picThuoc.TabStop = false;
             this.picThuoc.Click += new System.EventHandler(this.picThuoc_Click);
             // 
-            // picXemPhanHoi
+            // picDoanhThuThuoc
             // 
-            this.picXemPhanHoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picXemPhanHoi.Image = global::Phacmarcity_ADO.NET.Properties.Resources.report;
-            this.picXemPhanHoi.Location = new System.Drawing.Point(298, 291);
-            this.picXemPhanHoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picXemPhanHoi.Name = "picXemPhanHoi";
-            this.picXemPhanHoi.Size = new System.Drawing.Size(63, 35);
-            this.picXemPhanHoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picXemPhanHoi.TabIndex = 177;
-            this.picXemPhanHoi.TabStop = false;
+            this.picDoanhThuThuoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picDoanhThuThuoc.Image = global::Phacmarcity_ADO.NET.Properties.Resources.report;
+            this.picDoanhThuThuoc.Location = new System.Drawing.Point(298, 291);
+            this.picDoanhThuThuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picDoanhThuThuoc.Name = "picDoanhThuThuoc";
+            this.picDoanhThuThuoc.Size = new System.Drawing.Size(63, 35);
+            this.picDoanhThuThuoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDoanhThuThuoc.TabIndex = 177;
+            this.picDoanhThuThuoc.TabStop = false;
+            this.picDoanhThuThuoc.Click += new System.EventHandler(this.picDoanhThuThuoc_Click);
             // 
             // label2
             // 
@@ -435,7 +437,7 @@ namespace Phacmarcity_ADO.NET
             ((System.ComponentModel.ISupportInitialize)(this.picKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picThuoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picXemPhanHoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDoanhThuThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -457,7 +459,7 @@ namespace Phacmarcity_ADO.NET
         private Label label5;
         private PictureBox picNhanVien;
         private PictureBox picThuoc;
-        private PictureBox picXemPhanHoi;
+        private PictureBox picDoanhThuThuoc;
         private PictureBox picKhachHang;
         private PictureBox picPhieuXuat;
         private PictureBox picPhieuNhap;
