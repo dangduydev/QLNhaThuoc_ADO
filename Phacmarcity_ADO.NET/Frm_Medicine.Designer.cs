@@ -350,9 +350,10 @@ namespace Phacmarcity_ADO.NET
             this.label4.ForeColor = System.Drawing.Color.DarkCyan;
             this.label4.Location = new System.Drawing.Point(30, 391);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 28);
+            this.label4.Size = new System.Drawing.Size(97, 28);
             this.label4.TabIndex = 198;
-            this.label4.Text = "Ghi chú";
+            this.label4.Text = "Số lượng";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox3
             // 
@@ -552,9 +553,9 @@ namespace Phacmarcity_ADO.NET
             this.label5.ForeColor = System.Drawing.Color.DarkCyan;
             this.label5.Location = new System.Drawing.Point(30, 360);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 28);
+            this.label5.Size = new System.Drawing.Size(84, 28);
             this.label5.TabIndex = 207;
-            this.label5.Text = "Mã Loại";
+            this.label5.Text = "Ghi chú";
             // 
             // Frm_Medicine
             // 

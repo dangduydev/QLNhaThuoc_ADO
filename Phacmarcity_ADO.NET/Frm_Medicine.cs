@@ -40,9 +40,10 @@ namespace Phacmarcity_ADO.NET
         {
             try
             {
+
                 dbTP.CapNhatSLThuoc(ref err);
                 reset();
-                dgvThuoc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+/*                dgvThuoc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
                 dtThuoc = new DataTable();
                 dtThuoc.Clear();
                 DataSet ds = dbTP.LayThuoc();
@@ -274,7 +275,7 @@ namespace Phacmarcity_ADO.NET
             dgvThuoc.Rows[r].Cells[1].Value.ToString();
             this.MaHangSX.Text =
             dgvThuoc.Rows[r].Cells[2].Value.ToString();
-            this.MaLoai.Text =
+            this.MaNhaCungCap.Text =
             dgvThuoc.Rows[r].Cells[3].Value.ToString();
             this.CongDung.Text =
             dgvThuoc.Rows[r].Cells[4].Value.ToString();
@@ -333,6 +334,11 @@ namespace Phacmarcity_ADO.NET
         }
 
         private void dgvThuoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
