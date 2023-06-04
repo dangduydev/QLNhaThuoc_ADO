@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Phacmarcity_ADO.NET</RootNamespace>
     <AssemblyName>Phacmarcity_ADO.NET</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,6 +74,7 @@
     <Compile Include="BS layer\BLProduce_Product.cs" />
     <Compile Include="BS layer\BLThuoc.cs" />
     <Compile Include="BS layer\BL_Supplier.cs" />
+    <Compile Include="Class\AppSetting.cs" />
     <Compile Include="Class\StringConvert.cs" />
     <Compile Include="DB_layer\DBMain.cs" />
     <Compile Include="ENUM\Cls_Enum.cs" />

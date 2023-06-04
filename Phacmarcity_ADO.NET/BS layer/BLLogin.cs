@@ -1,4 +1,5 @@
-﻿using Phacmarcity_ADO.NET.DB_layer;
+﻿using Phacmarcity_ADO.NET.Class;
+using Phacmarcity_ADO.NET.DB_layer;
 using Phacmarcity_ADO.NET.ENUM;
 using System;
 using System.Collections.Generic;
@@ -29,29 +30,44 @@ namespace Phacmarcity_ADO.NET.BS_layer
             db.ConnectionString = "Data Source=(local);Initial Catalog=QLNhaThuoc;Integrated Security=True";
             return db.ExecuteQueryDataSet("SELECT * FROM TaiKhoan", CommandType.Text);
         }
-        public bool KiemTraDangNhap(string Username, string Pass)
+        public bool KiemTraDangNhap(string Username, string Password)
         {
-            string sqlString = "SELECT COUNT(*) FROM TaiKhoan WHERE MaNhanVien = @Username AND MatKhau = @Pass";
-            using (var conn = db.GetConnection())
+            string connectionString = "Data Source=(local);Initial Catalog=QLNhaThuoc;Integrated Security=True";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                conn.Open();
-                using (var command = new SqlCommand(sqlString, conn))
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("SELECT MatKhau, BoPhan FROM TaiKhoan INNER JOIN NhanVien ON TaiKhoan.MaNhanVien = NhanVien.MaNhanVien WHERE TaiKhoan.MaNhanVien = @Username", connection))
                 {
                     command.Parameters.AddWithValue("@Username", Username);
-                    command.Parameters.AddWithValue("@Pass", Pass);
-                    int count = (int)command.ExecuteScalar();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string storedPassword = reader.GetString(0);
+                            string department = reader.GetString(1);
 
-                    if (count > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                            if (Password == storedPassword)
+                            {
+                                // Đăng nhập thành công
+                                if (department == "Quản lý")
+                                {
+                                    AppSettings.flag_role = true;
+                                }
+                                else
+                                {
+                                    AppSettings.flag_role = false;
+                                }
+
+                                return true;
+                            }
+                        }
                     }
                 }
             }
+
+            return false;
         }
+
 
     }
 }

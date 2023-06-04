@@ -67,6 +67,7 @@ namespace Phacmarcity_ADO.NET
             this.btnCancel = new System.Windows.Forms.Button();
             this.picKhachHang = new System.Windows.Forms.PictureBox();
             this.picThuoc = new System.Windows.Forms.PictureBox();
+            this.btnPrintReview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -496,11 +497,26 @@ namespace Phacmarcity_ADO.NET
             this.picThuoc.TabStop = false;
             this.picThuoc.Click += new System.EventHandler(this.picThuoc_Click);
             // 
+            // btnPrintReview
+            // 
+            this.btnPrintReview.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnPrintReview.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnPrintReview.ForeColor = System.Drawing.Color.White;
+            this.btnPrintReview.Location = new System.Drawing.Point(1132, 91);
+            this.btnPrintReview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrintReview.Name = "btnPrintReview";
+            this.btnPrintReview.Size = new System.Drawing.Size(133, 61);
+            this.btnPrintReview.TabIndex = 196;
+            this.btnPrintReview.Text = "Print review";
+            this.btnPrintReview.UseVisualStyleBackColor = false;
+            this.btnPrintReview.Click += new System.EventHandler(this.btnPrintReview_Click);
+            // 
             // Frm_Produce_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 658);
+            this.Controls.Add(this.btnPrintReview);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlMain);
@@ -582,5 +598,6 @@ namespace Phacmarcity_ADO.NET
         private Panel pnlSearch;
         private Button btnCancel;
         private TextBox txtMaThuoc;
+        private Button btnPrintReview;
     }
 }

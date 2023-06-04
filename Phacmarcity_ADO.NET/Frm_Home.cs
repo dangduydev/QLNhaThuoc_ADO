@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Phacmarcity_ADO.NET.Class;
 
 namespace Phacmarcity_ADO.NET
 {
@@ -64,6 +65,8 @@ namespace Phacmarcity_ADO.NET
 
         private void Frm_Home_Load(object sender, EventArgs e)
         {
+            picDoanhThuThuoc.Enabled= AppSettings.flag_role;
+            picNhanVien.Enabled= AppSettings.flag_role;
 
         }
 

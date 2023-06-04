@@ -34,7 +34,7 @@ namespace Phacmarcity_ADO.NET
                 }
                 else
                 {
-                    MessageBox.Show("Lỗi tên đăng nhập hoặc mật khẩu");
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsername.Focus();
                     break;
                     /*                    // Yêu cầu người dùng nhập lại thông tin đăng nhập
@@ -50,6 +50,22 @@ namespace Phacmarcity_ADO.NET
         private void Frm_Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
         }
     }
 }

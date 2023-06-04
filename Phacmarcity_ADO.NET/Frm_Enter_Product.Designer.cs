@@ -72,6 +72,7 @@ namespace Phacmarcity_ADO.NET
             this.picThuoc = new System.Windows.Forms.PictureBox();
             this.picHangSX = new System.Windows.Forms.PictureBox();
             this.picNCC = new System.Windows.Forms.PictureBox();
+            this.btnPrintReview = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             this.pnlMain.SuspendLayout();
@@ -108,12 +109,12 @@ namespace Phacmarcity_ADO.NET
             this.dgvPhieuNhap.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuNhap.GridColor = System.Drawing.Color.White;
-            this.dgvPhieuNhap.Location = new System.Drawing.Point(458, 191);
+            this.dgvPhieuNhap.Location = new System.Drawing.Point(458, 168);
             this.dgvPhieuNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPhieuNhap.Name = "dgvPhieuNhap";
             this.dgvPhieuNhap.RowHeadersWidth = 51;
             this.dgvPhieuNhap.RowTemplate.Height = 29;
-            this.dgvPhieuNhap.Size = new System.Drawing.Size(814, 415);
+            this.dgvPhieuNhap.Size = new System.Drawing.Size(814, 438);
             this.dgvPhieuNhap.TabIndex = 40;
             this.dgvPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhap_CellClick);
             this.dgvPhieuNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhap_CellContentClick);
@@ -379,7 +380,7 @@ namespace Phacmarcity_ADO.NET
             this.label16.BackColor = System.Drawing.SystemColors.Control;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label16.Location = new System.Drawing.Point(752, 126);
+            this.label16.Location = new System.Drawing.Point(789, 103);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(224, 50);
             this.label16.TabIndex = 150;
@@ -577,11 +578,26 @@ namespace Phacmarcity_ADO.NET
             this.picNCC.TabStop = false;
             this.picNCC.Click += new System.EventHandler(this.picNCC_Click);
             // 
+            // btnPrintReview
+            // 
+            this.btnPrintReview.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnPrintReview.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnPrintReview.ForeColor = System.Drawing.Color.White;
+            this.btnPrintReview.Location = new System.Drawing.Point(1139, 92);
+            this.btnPrintReview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrintReview.Name = "btnPrintReview";
+            this.btnPrintReview.Size = new System.Drawing.Size(133, 61);
+            this.btnPrintReview.TabIndex = 196;
+            this.btnPrintReview.Text = "Print review";
+            this.btnPrintReview.UseVisualStyleBackColor = false;
+            this.btnPrintReview.Click += new System.EventHandler(this.btnPrintReview_Click);
+            // 
             // Frm_Enter_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 658);
+            this.Controls.Add(this.btnPrintReview);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlMain);
@@ -676,5 +692,6 @@ namespace Phacmarcity_ADO.NET
         private TextBox txtMaThuoc;
         private TextBox txtMaNCC;
         private DateTimePicker dtpTimKiem;
+        private Button btnPrintReview;
     }
 }

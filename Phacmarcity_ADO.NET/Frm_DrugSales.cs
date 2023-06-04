@@ -70,5 +70,11 @@ namespace Phacmarcity_ADO.NET
         {
 
         }
+
+        private void btnPrintReview_Click(object sender, EventArgs e)
+        {
+            Form f = new Frm_ReportDoanhThu();
+            f.ShowDialog();
+        }
     }
 }

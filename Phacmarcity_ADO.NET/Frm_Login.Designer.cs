@@ -112,16 +112,18 @@ namespace Phacmarcity_ADO.NET
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(312, 34);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPass.Location = new System.Drawing.Point(360, 250);
+            this.txtPass.Location = new System.Drawing.Point(360, 266);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(312, 34);
             this.txtPass.TabIndex = 4;
             this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // label2
             // 
@@ -153,7 +155,7 @@ namespace Phacmarcity_ADO.NET
             this.btnDangNhap.BackColor = System.Drawing.Color.Linen;
             this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangNhap.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnDangNhap.Location = new System.Drawing.Point(452, 310);
+            this.btnDangNhap.Location = new System.Drawing.Point(457, 325);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(155, 38);

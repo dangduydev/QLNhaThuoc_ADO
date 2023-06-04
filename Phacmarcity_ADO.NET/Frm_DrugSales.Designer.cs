@@ -31,12 +31,13 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtDoanhThu = new System.Windows.Forms.TextBox();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDoanhThuThuoc = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnPrintReview = new System.Windows.Forms.Button();
             this.pnlSearch.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThuThuoc)).BeginInit();
@@ -72,6 +73,18 @@
             this.pnlSearch.Size = new System.Drawing.Size(156, 74);
             this.pnlSearch.TabIndex = 256;
             this.pnlSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSearch_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(18, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.TabIndex = 236;
+            this.label2.Text = "Tổng Doanh Thu";
             // 
             // label16
             // 
@@ -131,23 +144,26 @@
             this.dgvDoanhThuThuoc.TabIndex = 244;
             this.dgvDoanhThuThuoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoanhThuThuoc_CellContentClick);
             // 
-            // label2
+            // btnPrintReview
             // 
-            this.label2.AutoSize = true;
-            this.label2.Enabled = false;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(18, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 16);
-            this.label2.TabIndex = 236;
-            this.label2.Text = "Tổng Doanh Thu";
+            this.btnPrintReview.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnPrintReview.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnPrintReview.ForeColor = System.Drawing.Color.White;
+            this.btnPrintReview.Location = new System.Drawing.Point(37, 246);
+            this.btnPrintReview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrintReview.Name = "btnPrintReview";
+            this.btnPrintReview.Size = new System.Drawing.Size(133, 61);
+            this.btnPrintReview.TabIndex = 257;
+            this.btnPrintReview.Text = "Print review";
+            this.btnPrintReview.UseVisualStyleBackColor = false;
+            this.btnPrintReview.Click += new System.EventHandler(this.btnPrintReview_Click);
             // 
             // Frm_DrugSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 713);
+            this.Controls.Add(this.btnPrintReview);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.label16);
@@ -178,5 +194,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvDoanhThuThuoc;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPrintReview;
     }
 }
